@@ -4,13 +4,13 @@ import Link from 'next/link'
 import { getRecentPosts, getSimilarPosts } from '../services'
 
 
-const postWidgets = ({ categories, slug }) => {
+const PostWidgets = ({ categories, slug }) => {
 
   const [relatedPosts, setRelatedPosts] = useState([])
 
   useEffect(() => {
     if (slug) {
-      getSimilarposts(categories, slug)
+      getSimilarPosts(categories, slug)
         .then((result) => setRelatedPosts(result))
     } else {
       getRecentPosts()
@@ -30,7 +30,7 @@ const postWidgets = ({ categories, slug }) => {
               <img
                 src={post.featuredImage.url}
                 alt={post.title}
-                className='align-middle rounded-full'
+                className='align-middle rounded-xl'
                 height="60px"
                 width="60px"
               />
@@ -51,4 +51,4 @@ const postWidgets = ({ categories, slug }) => {
   )
 }
 
-export default postWidgets
+export default PostWidgets
