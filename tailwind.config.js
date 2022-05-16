@@ -10,6 +10,9 @@ module.exports = {
         coffee2: "#361500",
         coffee3: "#603601",
         coffee4: "#CC9544",
+      },
+      fontFamily: {
+        'cinzel': ['Cinzel Decorative', 'serif'],
       }
     },
 
